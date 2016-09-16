@@ -1,3 +1,3 @@
 # api_user
 
-a [Sails](http://sailsjs.org) application
+Blueprint api with PubSub events.

@@ -1,0 +1,23 @@
+<html data-ng-app="User">
+  <head>
+    <meta charset="UTF-8">
+    <title>API User</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+  	<div id="container" data-ng-controller="ApiController as api">
+  		<form name="api.form" ng-submit="api.submitForm(api.form)">        
+            <input type="text" name="name" data-ng-model="user.name" placeholder="Name" required>
+            <input type="email" name="email" data-ng-model="user.email" placeholder="Email" required>
+            <input type="text" name="country" data-ng-model="user.country" placeholder="Country" required>
+            <input type="password" name="password" data-ng-model="user.password" placeholder="Pass" required>
+            <button type="submit" data-ng-disabled="Register.form.editing || Register.form.$pristine">Criar</button>
+            <button type="submit" ng-click="api.read()">Get</button>          
+        </form>
+        <p data-ng-repeat="user in api.users">
+        	{{user.name}} - {{user.email}}
+        </p>
+
+  	</div>
+  </body>
+</html>

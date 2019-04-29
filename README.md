@@ -1,3 +1,3 @@
 # api_user
 
-Blueprint api with PubSub events using Sails.js.
+Basic blueprint api with PubSub events using Sails.js.
